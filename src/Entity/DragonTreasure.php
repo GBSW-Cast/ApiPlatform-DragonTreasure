@@ -2,6 +2,9 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Doctrine\Orm\Filter\BooleanFilter;
+use ApiPlatform\Doctrine\Orm\Filter\SearchFilter;
+use ApiPlatform\Metadata\ApiFilter;
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\Get;
 use ApiPlatform\Metadata\GetCollection;
@@ -43,10 +46,12 @@ class DragonTreasure
 
   #[ORM\Column(length: 255)]
   #[Groups(['treasure:read', 'treasure:write'])]
+  #[ApiFilter(SearchFilter::class, strategy: 'partial')]
   private ?string $name = null;
 
   #[ORM\Column(type: Types::TEXT)]
   #[Groups(['treasure:read'])]
+  #[ApiFilter(SearchFilter::class, strategy: 'partial')]
   private ?string $description = null;
 
   /**
@@ -64,6 +69,7 @@ class DragonTreasure
   private ?\DateTimeImmutable $plunderedAt;
 
   #[ORM\Column]
+  #[ApiFilter(BooleanFilter::class)]
   private bool $isPublished = false;
 
   public function __construct(string $name = null)
