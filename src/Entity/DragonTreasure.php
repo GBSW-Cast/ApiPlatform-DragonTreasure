@@ -31,7 +31,8 @@ use Symfony\Component\Serializer\Attribute\SerializedName;
   ],
   denormalizationContext: [
     'groups' => ['treasure:write']
-  ]
+  ],
+  paginationItemsPerPage: 5
 )]
 class DragonTreasure
 {
@@ -154,7 +155,7 @@ class DragonTreasure
     return $this->isPublished;
   }
 
-  public function setPublished(bool $isPublished): static
+  public function setIsPublished(bool $isPublished): static
   {
     $this->isPublished = $isPublished;
 

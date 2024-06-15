@@ -19,4 +19,7 @@ return array(
     '8825ede83f2f289127722d4e842cf7e8' => $vendorDir . '/symfony/polyfill-intl-grapheme/bootstrap.php',
     'e69f7f6ee287b969198c3c9d6777bd38' => $vendorDir . '/symfony/polyfill-intl-normalizer/bootstrap.php',
     'b6b991a57620e2fb6b2f66f03fe9ddc2' => $vendorDir . '/symfony/string/Resources/functions.php',
+    '4f9a1929b39ff2a6c1016427077d16f5' => $vendorDir . '/zenstruck/foundry/src/functions.php',
+    '21978ed596d07828c426dc898e1f08e0' => $vendorDir . '/zenstruck/foundry/src/Persistence/functions.php',
+    'a8d29b081027eaae7a081084fff435bd' => $vendorDir . '/zenstruck/foundry/src/phpunit_helper.php',
 );
