@@ -9,6 +9,7 @@ use ApiPlatform\Metadata\ApiFilter;
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\Get;
 use ApiPlatform\Metadata\GetCollection;
+use ApiPlatform\Metadata\Link;
 use ApiPlatform\Metadata\Post;
 use ApiPlatform\Metadata\Put;
 use ApiPlatform\Metadata\Patch;
@@ -43,6 +44,20 @@ use function Symfony\Component\String\u;
     'groups' => ['treasure:write']
   ],
   paginationItemsPerPage: 5
+)]
+#[ApiResource(
+  uriTemplate: '/users/{user_id}/treasures.{_format}',
+  shortName: 'Treasure',
+  operations: [new GetCollection()],
+  uriVariables: [
+    'user_id' => new Link(
+      fromProperty: 'dragonTreasures',
+      fromClass: User::class,
+    )
+  ],
+  normalizationContext: [
+    'groups' => ['treasure:read']
+  ]
 )]
 #[ApiFilter(PropertyFilter::class)]
 #[ApiFilter(SearchFilter::class, properties: ['owner.username' => 'partial'])]

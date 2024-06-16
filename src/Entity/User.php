@@ -6,6 +6,7 @@ use ApiPlatform\Metadata\ApiFilter;
 use ApiPlatform\Metadata\ApiResource;
 use ApiPlatform\Metadata\Get;
 use ApiPlatform\Metadata\GetCollection;
+use ApiPlatform\Metadata\Link;
 use ApiPlatform\Metadata\Patch;
 use ApiPlatform\Metadata\Post;
 use ApiPlatform\Metadata\Put;
@@ -42,6 +43,19 @@ use Symfony\Component\Validator\Constraints as Assert;
     'groups' => ['user:write']
   ],
   paginationItemsPerPage: 5
+)]
+#[ApiResource(
+  uriTemplate: '/treasures/{treasure_id}/owner.{_format}',
+  operations: [new Get()],
+  uriVariables: [
+    'treasure_id' => new Link(
+      fromProperty: 'owner',
+      fromClass: DragonTreasure::class
+    )
+  ],
+  normalizationContext: [
+    'groups' => ['user:read']
+  ]
 )]
 #[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
 #[UniqueEntity(fields: ['username'], message: 'There is already an account with this username')]
