@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use ApiPlatform\Doctrine\Orm\Filter\BooleanFilter;
+use ApiPlatform\Doctrine\Orm\Filter\RangeFilter;
 use ApiPlatform\Doctrine\Orm\Filter\SearchFilter;
 use ApiPlatform\Metadata\ApiFilter;
 use ApiPlatform\Metadata\ApiResource;
@@ -11,12 +12,15 @@ use ApiPlatform\Metadata\GetCollection;
 use ApiPlatform\Metadata\Post;
 use ApiPlatform\Metadata\Put;
 use ApiPlatform\Metadata\Patch;
+use ApiPlatform\Serializer\Filter\PropertyFilter;
 use App\Repository\DragonTreasureRepository;
 use Carbon\Carbon;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Attribute\Groups;
 use Symfony\Component\Serializer\Attribute\SerializedName;
+use Symfony\Component\Validator\Constraints as Assert;
+use function Symfony\Component\String\u;
 
 #[ORM\Entity(repositoryClass: DragonTreasureRepository::class)]
 #[ApiResource(
@@ -29,6 +33,9 @@ use Symfony\Component\Serializer\Attribute\SerializedName;
     new Put(),
     new Patch()
   ],
+  formats: [
+    'jsonld', 'json', 'html', 'csv' => 'application/csv'
+  ],
   normalizationContext: [
     'groups' => ['treasure:read']
   ],
@@ -37,6 +44,7 @@ use Symfony\Component\Serializer\Attribute\SerializedName;
   ],
   paginationItemsPerPage: 5
 )]
+#[ApiFilter(PropertyFilter::class)]
 class DragonTreasure
 {
   #[ORM\Id]
@@ -47,11 +55,14 @@ class DragonTreasure
   #[ORM\Column(length: 255)]
   #[Groups(['treasure:read', 'treasure:write'])]
   #[ApiFilter(SearchFilter::class, strategy: 'partial')]
+  #[Assert\NotBlank]
+  #[Assert\Length(min: 2, max: 50, maxMessage: 'Describe your loot in 50 chars or less')]
   private ?string $name = null;
 
   #[ORM\Column(type: Types::TEXT)]
   #[Groups(['treasure:read'])]
   #[ApiFilter(SearchFilter::class, strategy: 'partial')]
+  #[Assert\NotBlank]
   private ?string $description = null;
 
   /**
@@ -59,10 +70,14 @@ class DragonTreasure
    */
   #[ORM\Column]
   #[Groups(['treasure:read', 'treasure:write'])]
-  private ?int $value = null;
+  #[ApiFilter(RangeFilter::class)]
+  #[Assert\GreaterThanOrEqual(0)]
+  private ?int $value = 0;
 
   #[ORM\Column]
   #[Groups(['treasure:read', 'treasure:write'])]
+  #[Assert\GreaterThanOrEqual(0)]
+  #[Assert\LessThanOrEqual(10)]
   private ?int $coolFactor = null;
 
   #[ORM\Column]
@@ -101,6 +116,11 @@ class DragonTreasure
     return $this->description;
   }
 
+  #[Groups(['treasure:read'])]
+  public function getShortDescription(): ?string
+  {
+    return u( $this->description )->truncate(40, '...');
+  }
 
   #[Groups(['treasure:write'])]
   #[SerializedName('description')]

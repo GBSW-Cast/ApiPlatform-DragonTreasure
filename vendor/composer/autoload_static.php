@@ -34,6 +34,7 @@ class ComposerStaticInit79e0c7000d896f4e5289faeab660900b
         array (
             'Zenstruck\\Foundry\\' => 18,
             'Zenstruck\\' => 10,
+            'Zend\\Diactoros\\' => 15,
         ),
         'W' => 
         array (
@@ -102,6 +103,7 @@ class ComposerStaticInit79e0c7000d896f4e5289faeab660900b
         array (
             'Psr\\Log\\' => 8,
             'Psr\\Link\\' => 9,
+            'Psr\\Http\\Message\\' => 17,
             'Psr\\EventDispatcher\\' => 20,
             'Psr\\Container\\' => 14,
             'Psr\\Clock\\' => 10,
@@ -111,6 +113,12 @@ class ComposerStaticInit79e0c7000d896f4e5289faeab660900b
         ),
         'N' => 
         array (
+            'NilPortugues\\Serializer\\' => 24,
+            'NilPortugues\\Api\\Transformer\\' => 29,
+            'NilPortugues\\Api\\Mappings\\' => 26,
+            'NilPortugues\\Api\\Mapping\\' => 25,
+            'NilPortugues\\Api\\Http\\' => 22,
+            'NilPortugues\\Api\\Hal\\' => 21,
             'Nelmio\\CorsBundle\\' => 18,
             'Negotiation\\' => 12,
         ),
@@ -168,6 +176,10 @@ class ComposerStaticInit79e0c7000d896f4e5289faeab660900b
         'Zenstruck\\' => 
         array (
             0 => __DIR__ . '/..' . '/zenstruck/assert/src',
+        ),
+        'Zend\\Diactoros\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-diactoros/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -393,6 +405,10 @@ class ComposerStaticInit79e0c7000d896f4e5289faeab660900b
         array (
             0 => __DIR__ . '/..' . '/psr/link/src',
         ),
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
         'Psr\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/event-dispatcher/src',
@@ -416,6 +432,30 @@ class ComposerStaticInit79e0c7000d896f4e5289faeab660900b
         'PHPStan\\PhpDocParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpstan/phpdoc-parser/src',
+        ),
+        'NilPortugues\\Serializer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nilportugues/serializer/src',
+        ),
+        'NilPortugues\\Api\\Transformer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nilportugues/api-transformer/src/Transformer',
+        ),
+        'NilPortugues\\Api\\Mappings\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nilportugues/api-transformer/src/Mappings',
+        ),
+        'NilPortugues\\Api\\Mapping\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nilportugues/api-transformer/src/Mapping',
+        ),
+        'NilPortugues\\Api\\Http\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nilportugues/api-transformer/src/Http',
+        ),
+        'NilPortugues\\Api\\Hal\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nilportugues/hal/src',
         ),
         'Nelmio\\CorsBundle\\' => 
         array (

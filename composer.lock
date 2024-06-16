@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "909f3a52e6c7bcb7c1563f09f951cb2e",
+    "content-hash": "f0b8b6c3536230bc3cd300a1de89c373",
     "packages": [
         {
             "name": "api-platform/core",
@@ -1756,6 +1756,188 @@
             "time": "2024-06-03T17:25:54+00:00"
         },
         {
+            "name": "nilportugues/api-transformer",
+            "version": "1.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nilportugues/php-api-transformer.git",
+                "reference": "0379e1153d6595b626593f6b363a00a3486d6efd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nilportugues/php-api-transformer/zipball/0379e1153d6595b626593f6b363a00a3486d6efd",
+                "reference": "0379e1153d6595b626593f6b363a00a3486d6efd",
+                "shasum": ""
+            },
+            "require": {
+                "nilportugues/serializer": "~1.1",
+                "php": ">=5.5.0",
+                "psr/http-message": "~1.0",
+                "zendframework/zend-diactoros": "^1.1.0"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "~1.9",
+                "mmoreram/php-formatter": "dev-master",
+                "nilportugues/php_backslasher": "~0.2",
+                "phpunit/phpunit": "5.*",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NilPortugues\\Api\\Http\\": "src/Http/",
+                    "NilPortugues\\Api\\Mapping\\": "src/Mapping/",
+                    "NilPortugues\\Api\\Mappings\\": "src/Mappings/",
+                    "NilPortugues\\Api\\Transformer\\": "src/Transformer/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nil Portugués Calderó",
+                    "email": "contact@nilportugues.com",
+                    "role": "Project Lead Developer"
+                }
+            ],
+            "description": "Base library providing the core functionality for API transformation.",
+            "homepage": "http://nilportugues.com",
+            "keywords": [
+                "api",
+                "psr7",
+                "response",
+                "serializer",
+                "transformer"
+            ],
+            "support": {
+                "issues": "https://github.com/nilportugues/php-api-transformer/issues",
+                "source": "https://github.com/nilportugues/php-api-transformer/tree/1.6.1"
+            },
+            "time": "2016-06-30T22:39:16+00:00"
+        },
+        {
+            "name": "nilportugues/hal",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nilportugues/php-hal.git",
+                "reference": "02298ccb3e43c57ebabe24adbc48f7effa63b6b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nilportugues/php-hal/zipball/02298ccb3e43c57ebabe24adbc48f7effa63b6b6",
+                "reference": "02298ccb3e43c57ebabe24adbc48f7effa63b6b6",
+                "shasum": ""
+            },
+            "require": {
+                "nilportugues/api-transformer": "^1.5",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^1.9",
+                "phpunit/phpunit": "4.4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NilPortugues\\Api\\Hal\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nil Portugués Calderó",
+                    "email": "contact@nilportugues.com",
+                    "role": "Project Lead Developer"
+                }
+            ],
+            "description": "HAL+JSON & HAL+XML API transformer outputting valid API responses.",
+            "homepage": "http://nilportugues.com",
+            "keywords": [
+                "api",
+                "hal",
+                "json",
+                "psr7",
+                "response",
+                "serializer",
+                "transformer"
+            ],
+            "support": {
+                "issues": "https://github.com/nilportugues/php-hal/issues",
+                "source": "https://github.com/nilportugues/php-hal/tree/master"
+            },
+            "time": "2017-03-21T13:10:29+00:00"
+        },
+        {
+            "name": "nilportugues/serializer",
+            "version": "1.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nilportugues/serializer.git",
+                "reference": "82ede04c687336aaec5f1c58f3ec986626b05810"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nilportugues/serializer/zipball/82ede04c687336aaec5f1c58f3ec986626b05810",
+                "reference": "82ede04c687336aaec5f1c58f3ec986626b05810",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "doctrine/collections": "^1.3",
+                "fabpot/php-cs-fixer": "^1.9",
+                "mmoreram/php-formatter": "dev-master",
+                "phpunit/phpunit": "4.4.*",
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NilPortugues\\Serializer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nil Portugués Calderó",
+                    "email": "contact@nilportugues.com",
+                    "role": "Project Lead Developer"
+                },
+                {
+                    "name": "Zumba Fitness, LLC",
+                    "email": "engineering@zumba.com",
+                    "role": "Author of the original idea: https://github.com/zumba/json-serializer"
+                },
+                {
+                    "name": "Juan Basso",
+                    "email": "juan.basso@zumba.com",
+                    "role": "Author of the original idea: https://github.com/zumba/json-serializer"
+                }
+            ],
+            "description": "Serialize PHP variables, including objects, in any format. Support to unserialize it too.",
+            "homepage": "http://nilportugues.com",
+            "keywords": [
+                "json",
+                "serialize",
+                "serializer"
+            ],
+            "support": {
+                "issues": "https://github.com/nilportugues/serializer/issues",
+                "source": "https://github.com/nilportugues/serializer/tree/master"
+            },
+            "time": "2015-08-28T23:12:12+00:00"
+        },
+        {
             "name": "phpdocumentor/reflection-common",
             "version": "2.2.0",
             "source": {
@@ -2176,6 +2358,59 @@
                 "source": "https://github.com/php-fig/event-dispatcher/tree/1.0.0"
             },
             "time": "2019-01-08T18:20:26+00:00"
+        },
+        {
+            "name": "psr/http-message",
+            "version": "1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
+                "reference": "cb6ce4845ce34a8ad9e68117c10ee90a29919eba",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2 || ^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/http-message/tree/1.1"
+            },
+            "time": "2023-04-04T09:50:52+00:00"
         },
         {
             "name": "psr/link",
@@ -6451,6 +6686,61 @@
                 "source": "https://github.com/willdurand/Negotiation/tree/3.1.0"
             },
             "time": "2022-01-30T20:08:53+00:00"
+        },
+        {
+            "name": "zendframework/zend-diactoros",
+            "version": "1.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-diactoros.git",
+                "reference": "4d54fde709664562eb63356f0250d527824d05de"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/4d54fde709664562eb63356f0250d527824d05de",
+                "reference": "4d54fde709664562eb63356f0250d527824d05de",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "psr/http-message": "~1.0"
+            },
+            "provide": {
+                "psr/http-message-implementation": "~1.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.6",
+                "squizlabs/php_codesniffer": "^2.3.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3-dev",
+                    "dev-develop": "1.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Diactoros\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "description": "PSR HTTP Message implementations",
+            "homepage": "https://github.com/zendframework/zend-diactoros",
+            "keywords": [
+                "http",
+                "psr",
+                "psr-7"
+            ],
+            "support": {
+                "issues": "https://github.com/zendframework/zend-diactoros/issues",
+                "source": "https://github.com/zendframework/zend-diactoros"
+            },
+            "abandoned": "laminas/laminas-diactoros",
+            "time": "2016-01-04T21:37:32+00:00"
         }
     ],
     "packages-dev": [
