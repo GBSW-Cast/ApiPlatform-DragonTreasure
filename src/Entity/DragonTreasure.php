@@ -45,6 +45,7 @@ use function Symfony\Component\String\u;
   paginationItemsPerPage: 5
 )]
 #[ApiFilter(PropertyFilter::class)]
+#[ApiFilter(SearchFilter::class, properties: ['owner.username' => 'partial'])]
 class DragonTreasure
 {
   #[ORM\Id]
