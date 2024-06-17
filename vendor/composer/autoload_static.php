@@ -129,6 +129,10 @@ class ComposerStaticInit79e0c7000d896f4e5289faeab660900b
         array (
             'Monolog\\' => 8,
         ),
+        'G' => 
+        array (
+            'GraphQL\\' => 8,
+        ),
         'F' => 
         array (
             'Faker\\' => 6,
@@ -483,6 +487,10 @@ class ComposerStaticInit79e0c7000d896f4e5289faeab660900b
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'GraphQL\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/webonyx/graphql-php/src',
         ),
         'Faker\\' => 
         array (

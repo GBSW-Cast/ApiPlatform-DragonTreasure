@@ -33,7 +33,8 @@
         "symfony/ux-react": "^2.18",
         "symfony/validator": "6.4.*",
         "symfony/webpack-encore-bundle": "^2.1",
-        "symfony/yaml": "6.4.*"
+        "symfony/yaml": "6.4.*",
+        "webonyx/graphql-php": "^15.12"
     },
     "config": {
         "allow-plugins": {
