@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'b210957bc982833ca991e6034bc64546a6403414',
+        'reference' => 'a10b3cbc0e83483e057f895836f5a1abb61da5d8',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'b210957bc982833ca991e6034bc64546a6403414',
+            'reference' => 'a10b3cbc0e83483e057f895836f5a1abb61da5d8',
             'dev_requirement' => false,
         ),
         'api-platform/core' => array(
@@ -897,6 +897,15 @@
             'install_path' => __DIR__ . '/../symfony/ux-react',
             'aliases' => array(),
             'reference' => 'ac99b57093f855452c6d9cc7f39272ff613cde1f',
+            'dev_requirement' => false,
+        ),
+        'symfony/ux-vue' => array(
+            'pretty_version' => 'v2.18.0',
+            'version' => '2.18.0.0',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../symfony/ux-vue',
+            'aliases' => array(),
+            'reference' => '1acb4f7c14a0ad77e3e6448b19ee9b9d3b65aae9',
             'dev_requirement' => false,
         ),
         'symfony/validator' => array(

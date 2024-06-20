@@ -47,6 +47,7 @@ class ComposerStaticInit79e0c7000d896f4e5289faeab660900b
         'S' => 
         array (
             'Symfony\\WebpackEncoreBundle\\' => 28,
+            'Symfony\\UX\\Vue\\' => 15,
             'Symfony\\UX\\StimulusBundle\\' => 26,
             'Symfony\\UX\\React\\' => 17,
             'Symfony\\Runtime\\Symfony\\Component\\' => 34,
@@ -199,6 +200,10 @@ class ComposerStaticInit79e0c7000d896f4e5289faeab660900b
         'Symfony\\WebpackEncoreBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src',
+        ),
+        'Symfony\\UX\\Vue\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/ux-vue/src',
         ),
         'Symfony\\UX\\StimulusBundle\\' => 
         array (

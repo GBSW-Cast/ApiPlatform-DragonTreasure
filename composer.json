@@ -31,6 +31,7 @@
         "symfony/serializer": "6.4.*",
         "symfony/twig-bundle": "6.4.*",
         "symfony/ux-react": "^2.18",
+        "symfony/ux-vue": "^2.18",
         "symfony/validator": "6.4.*",
         "symfony/webpack-encore-bundle": "^2.1",
         "symfony/yaml": "6.4.*",
