@@ -6,6 +6,6 @@ import './styles/app.css';
 
 import './bootstrap.js';
 
-registerReactControllerComponents(require.context('./react/controllers', true, /\.(j|t)sx?$/));
+// registerReactControllerComponents(require.context('./react/controllers', true, /\.(j|t)sx?$/));
 
 registerVueControllerComponents(require.context('./vue/controllers', true, /\.vue$/));
